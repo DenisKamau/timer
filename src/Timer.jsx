@@ -44,14 +44,19 @@ const Timer = () => {
               <h3 className={styles.day}>{day}</h3>
               {day > 1 ? <h3>Days</h3> : <h3>Day</h3>}
             </div>
+            <h4>:</h4>
             <div className={styles.container_hour}>
               <h3 className={styles.hour}>{hour}</h3>
               {hour > 1 ? <h3>Hours</h3> : <h3>Hour</h3>}
             </div>
+            <h4>:</h4>
+
             <div className={styles.container_minute}>
               <h3 className={styles.minute}>{minute}</h3>
               {minute > 1 ? <h3>Minutes</h3> : <h3>Minute</h3>}
             </div>
+            <h4>:</h4>
+
             <div className={styles.container_seconds}>
               <h3 className={styles.seconds}>{seconds}</h3>
               <h3>Seconds</h3>
