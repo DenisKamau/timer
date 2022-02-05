@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
 const Timer = () => {
-  const [day, setDay] = useState(0);
-  const [hour, setHour] = useState(0);
-  const [minute, setMinute] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+  const [day, setDay] = useState(null);
+  const [hour, setHour] = useState(null);
+  const [minute, setMinute] = useState(null);
+  const [seconds, setSeconds] = useState(null);
 
   const countdown = () => {
     const countDate = new Date("Feb 11, 2022 00:00:00").getTime();
