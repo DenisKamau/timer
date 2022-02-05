@@ -1,6 +1,8 @@
 import Head from "next/head";
-import Particles from "react-tsparticles";
-import Timer from "../src/Timer";
+import dynamic from "next/dynamic";
+
+const Timer = dynamic(() => import("../src/Timer"));
+const Particles = dynamic(() => import("react-tsparticles"));
 
 export default function Home() {
   return (
