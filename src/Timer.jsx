@@ -58,7 +58,9 @@ const Timer = () => {
             </div>
           </div>
         </div>
-        <Image src="/undraw_winners_re_wr1l.svg" alt="illustration" height={330} width={330} quality={100} priority />
+        <div className={styles.image}>
+          <Image src="/undraw_winners_re_wr1l.svg" alt="illustration" height={250} width={250} quality={100} priority />
+        </div>
       </div>
     </section>
   );
