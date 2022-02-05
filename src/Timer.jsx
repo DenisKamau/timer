@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
 const Timer = () => {
-  const [day, setDay] = useState(null);
-  const [hour, setHour] = useState(null);
-  const [minute, setMinute] = useState(null);
-  const [seconds, setSeconds] = useState(null);
+  const [day, setDay] = useState(0);
+  const [hour, setHour] = useState(0);
+  const [minute, setMinute] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
   const countdown = () => {
     const countDate = new Date("Feb 11, 2022 00:00:00").getTime();
@@ -39,29 +39,31 @@ const Timer = () => {
       <div className={styles.coming_soon}>
         <div>
           <h2>We are Opening Soon!</h2>
-          <div className={styles.countdown}>
-            <div className={styles.container_day}>
-              <h3 className={styles.day}>{day}</h3>
-              {day > 1 ? <h3>Days</h3> : <h3>Day</h3>}
-            </div>
-            <h4>:</h4>
-            <div className={styles.container_hour}>
-              <h3 className={styles.hour}>{hour}</h3>
-              {hour > 1 ? <h3>Hours</h3> : <h3>Hour</h3>}
-            </div>
-            <h4>:</h4>
+          {day && (
+            <div className={styles.countdown}>
+              <div className={styles.container_day}>
+                <h3 className={styles.day}>{day}</h3>
+                {day > 1 ? <h3>Days</h3> : <h3>Day</h3>}
+              </div>
+              <h4>:</h4>
+              <div className={styles.container_hour}>
+                <h3 className={styles.hour}>{hour}</h3>
+                {hour > 1 ? <h3>Hours</h3> : <h3>Hour</h3>}
+              </div>
+              <h4>:</h4>
 
-            <div className={styles.container_minute}>
-              <h3 className={styles.minute}>{minute}</h3>
-              {minute > 1 ? <h3>Minutes</h3> : <h3>Minute</h3>}
-            </div>
-            <h4>:</h4>
+              <div className={styles.container_minute}>
+                <h3 className={styles.minute}>{minute}</h3>
+                {minute > 1 ? <h3>Minutes</h3> : <h3>Minute</h3>}
+              </div>
+              <h4>:</h4>
 
-            <div className={styles.container_seconds}>
-              <h3 className={styles.seconds}>{seconds}</h3>
-              <h3>Seconds</h3>
+              <div className={styles.container_seconds}>
+                <h3 className={styles.seconds}>{seconds}</h3>
+                <h3>Seconds</h3>
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <div className={styles.image}>
           <Image src="/undraw_winners_re_wr1l.svg" alt="illustration" height={250} width={250} quality={100} priority />
