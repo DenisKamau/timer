@@ -39,31 +39,29 @@ const Timer = () => {
       <div className={styles.coming_soon}>
         <div>
           <h2>We are Opening Soon!</h2>
-          {day && (
-            <div className={styles.countdown}>
-              <div className={styles.container_day}>
-                <h3 className={styles.day}>{day}</h3>
-                {day > 1 ? <h3>Days</h3> : <h3>Day</h3>}
-              </div>
-              <h4>:</h4>
-              <div className={styles.container_hour}>
-                <h3 className={styles.hour}>{hour}</h3>
-                {hour > 1 ? <h3>Hours</h3> : <h3>Hour</h3>}
-              </div>
-              <h4>:</h4>
-
-              <div className={styles.container_minute}>
-                <h3 className={styles.minute}>{minute}</h3>
-                {minute > 1 ? <h3>Minutes</h3> : <h3>Minute</h3>}
-              </div>
-              <h4>:</h4>
-
-              <div className={styles.container_seconds}>
-                <h3 className={styles.seconds}>{seconds}</h3>
-                <h3>Seconds</h3>
-              </div>
+          <div className={styles.countdown}>
+            <div className={styles.container_day}>
+              <h3 className={styles.day}>{day}</h3>
+              {day !== 1 ? <h3>Days</h3> : <h3>Day</h3>}
             </div>
-          )}
+            <h4>:</h4>
+            <div className={styles.container_hour}>
+              <h3 className={styles.hour}>{hour}</h3>
+              {hour !== 1 ? <h3>Hours</h3> : <h3>Hour</h3>}
+            </div>
+            <h4>:</h4>
+
+            <div className={styles.container_minute}>
+              <h3 className={styles.minute}>{minute}</h3>
+              {minute !== 1 ? <h3>Minutes</h3> : <h3>Minute</h3>}
+            </div>
+            <h4>:</h4>
+
+            <div className={styles.container_seconds}>
+              <h3 className={styles.seconds}>{seconds}</h3>
+              {seconds !== 1 ? <h3>Seconds</h3> : <h3>Second</h3>}
+            </div>
+          </div>
         </div>
         <div className={styles.image}>
           <Image src="/undraw_winners_re_wr1l.svg" alt="illustration" height={250} width={250} quality={100} priority />

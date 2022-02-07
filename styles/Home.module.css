@@ -38,6 +38,12 @@
   .app {
     margin: 0px 8px;
   }
+
+  .coming_soon {
+    min-height: auto;
+    padding-top: 60px;
+  }
+
   .coming_soon > div > h2 {
     font-size: 3rem;
   }
